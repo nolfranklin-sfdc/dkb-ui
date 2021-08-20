@@ -7,9 +7,52 @@ Variation: Primary, secondary, terterary, text
 #}
 
 
+{# Set a button size. If empty, no clasess are applied #}
+
+{{ setDisplay }}
+	{% if button_display === 'block' %}
+		{% set button_display = "block" %}
+	{% elif button_display === 'inline-block' %}
+		{% set button_display = "inline-block" %}
+	{% else %}
+		{% set button_display = '' %}
+	{% endif %}
+{{ setDisplay }}
+
+{{ setSize }}
+	{% if params.size === 'lg' %}
+		{% set size = "button--lg" %}
+	{% elif params.size === 'md' %}
+		{% set size = "button--md" %}
+	{% elif params.size === 'sm' %}
+		{% set size = "button--sm" %}
+	{% else %}
+		{% set button_size = '' %}
+	{% endif %}
+{{ setSize }}
+
+{{ setVariation }}
+	{% if params.variation === 'primary' %}
+		{% set variation = "button--primary" %}
+	{% elif params.variation === 'secondary' %}
+		{% set variation = "button--secondary" %}
+	{% elif button_variation === 'tertiary' %}
+		{% set button_variation = "button--tertiary" %}
+	{% elif button_variation === 'text' %}
+		{% set button_variation = "button--text" %}
+	{% else %}
+		{% set button_variation = '' %}
+	{% endif %}
+{{ setVariation }}
+
+{# Button template #}
+
 <a
-	href="#"
-	class="atom atom--button button--primary bg-blue-700 hover:bg-blue-900 text-white text-xl px-6 py-3 rounded inline-block"
+	href="{{ params.href }}"
+	class="button {{ variation }} {{ size }} {{ params.classes }} {{ display }}"
+	{% if params.target %}target="{{ params.target }}"{% endif %}
 >
-	{{ params.text }}
+	<span class="button__text">
+		{{ params.text }}
+	</span>
 </a>
