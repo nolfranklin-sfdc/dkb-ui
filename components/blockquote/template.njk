@@ -1,15 +1,13 @@
 <figure
 	class="molecule molecule--blockquote"
 >
-	<blockquote
-		cite=""
-		class=""
-	>
-		<p>
-			...
-		</p>
+	<blockquote>
+		{{ params.quote | safe }}
 	</blockquote>
+	{% if params.cite %}
 	<figcaption>
-		...
+		{{ params.cite }}
 	</figcaption>
+	{% endif %}
 </figure>
+
