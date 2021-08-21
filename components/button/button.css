@@ -1,0 +1,36 @@
+/* ====================
+
+Button
+
+==================== */
+
+.button {
+	@apply rounded font-avantgarde border-2;
+	transition: background .125s ease-in-out;
+}
+
+/* Variations */
+
+.button--primary {
+	@apply text-white bg-blue-50 border-blue-50 hover:bg-blue-30 hover:border-blue-30;
+}
+
+.button--secondary {
+	@apply text-white bg-green-50;
+}
+
+.button--outline {
+	@apply text-blue-50 bg-white border-blue-50 hover:border-blue-30 hover:text-blue-30;
+}
+
+/* Sizes */
+
+.button--lg {
+	@apply text-sm py-sm px-5;
+}
+
+/* Button groups */
+
+.component--headline__button-group .button {
+	@apply mr-2 md:mr-7;
+}
