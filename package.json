@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx tailwindcss -i assets/css/style.css -o assets/css/style.min.css",
-    "start": "eleventy --serve & postcss assets/css/style.css --o assets/css/style.min.css --watch"
+    "start": "eleventy --serve & postcss assets/css/style.css --o assets/css/style.dev.css --watch"
   },
   "keywords": [],
   "author": "",
