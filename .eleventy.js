@@ -1,5 +1,7 @@
 module.exports = function (config) {
 
+	config.addPassthroughCopy("assets");
+
 	return {
 		dir: {
 			input: 'src/site/content/',
@@ -13,7 +15,7 @@ module.exports = function (config) {
 		// Because eleventy's passthroughFileCopy does not work with permalinks
 		// we need to manually copy assets ourselves using gulp.
 		// https://github.com/11ty/eleventy/issues/379
-		passthroughFileCopy: false,
+		passthroughFileCopy: true,
 	};
 
 };
