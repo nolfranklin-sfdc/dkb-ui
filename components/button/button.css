@@ -16,7 +16,7 @@ Button
 }
 
 .button--secondary {
-	@apply text-white bg-green-60 border-green-60;
+	@apply bg-white border-blue-50 text-blue-50;
 }
 
 .button--outline {
