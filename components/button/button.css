@@ -16,7 +16,7 @@ Button
 }
 
 .button--secondary {
-	@apply text-white bg-green-50;
+	@apply text-white bg-green-60 border-green-60;
 }
 
 .button--outline {
@@ -27,6 +27,10 @@ Button
 
 .button--lg {
 	@apply text-sm py-sm px-5;
+}
+
+.button--md {
+	@apply text-sm py-sm px-20;
 }
 
 /* Button groups */

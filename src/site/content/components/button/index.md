@@ -7,11 +7,23 @@ templateEngineOverride: njk
 
 <div class="p-2">
 {{ dkbButton({
-		text: "Try free trial",
+		text: "Primary button",
 		href: "https://www.salesforce.com/",
 		size: "lg",
-		classes: "",
+		classes: "inline-block",
 		variation: "primary",
+		target:"_blank"
+	})
+}}
+</div>
+
+<div class="p-2">
+{{ dkbButton({
+		text: "Secondary button",
+		href: "https://www.salesforce.com/",
+		size: "lg",
+		classes: "inline-block",
+		variation: "secondary",
 		target:"_blank"
 	})
 }}
