@@ -73,7 +73,8 @@ module.exports = {
 				'15': '-0.002em'
 			},
 			padding: {
-				'sm': '0.8125rem'
+				'a': '0.8125rem',
+				'b': '0.625rem'
 			}
 		}
 	},

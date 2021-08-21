@@ -6,7 +6,7 @@ Button
 
 .button {
 	@apply rounded font-avantgarde border-2;
-	transition: background .125s ease-in-out;
+	transition: background .125s ease-in-out, border .125s ease-in-out;
 }
 
 /* Variations */
@@ -16,21 +16,25 @@ Button
 }
 
 .button--secondary {
-	@apply bg-white border-blue-50 text-blue-50;
+	@apply bg-white border-blue-50 text-blue-50 hover:border-blue-30 hover:text-blue-30 focus:text-blue-30;
 }
 
-.button--outline {
-	@apply text-blue-50 bg-white border-blue-50 hover:border-blue-30 hover:text-blue-30;
+.button--tertiary {
+	@apply text-blue-50 border-transparent;
 }
 
 /* Sizes */
 
 .button--lg {
-	@apply text-sm py-sm px-5;
+	@apply text-sm py-a px-5;
 }
 
 .button--md {
-	@apply text-sm py-sm px-20;
+	@apply text-sm py-b px-4;
+}
+
+.button--sm {
+	@apply text-sm py-b px-4;
 }
 
 /* Button groups */

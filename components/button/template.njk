@@ -36,12 +36,12 @@ Variation: Primary, secondary, terterary, text
 		{% set variation = "button--primary" %}
 	{% elif params.variation === 'secondary' %}
 		{% set variation = "button--secondary" %}
-	{% elif button_variation === 'tertiary' %}
-		{% set button_variation = "button--tertiary" %}
-	{% elif button_variation === 'text' %}
-		{% set button_variation = "button--text" %}
+	{% elif params.variation === 'tertiary' %}
+		{% set variation = "button--tertiary" %}
+	{% elif params.variation === 'text' %}
+		{% set variation = "button--text" %}
 	{% else %}
-		{% set button_variation = '' %}
+		{% set variation = '' %}
 	{% endif %}
 {{ setVariation }}
 
