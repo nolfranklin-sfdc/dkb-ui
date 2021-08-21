@@ -1,0 +1,33 @@
+@layer components {
+
+	/* https://www.figma.com/file/flWzkvIZVaRpEJmwHlLBzg/SFDC-Typography?node-id=4373%3A688 */ 
+
+	.display-1 {
+		@apply text-80 leading-80 tracking-18;
+	}
+	
+	.display-2 {
+		@apply text-52 leading-52 tracking-22;
+	}
+	
+	.display-3 {
+		@apply text-4xl leading-80;
+	}
+	
+	.display-4 {
+		@apply text-2xl leading-28;
+	}
+	
+	.display-5 {
+		@apply text-lg leading-28;
+	}
+	
+	.display-6 {
+		@apply text-sm mb-3 font-bold uppercase tracking-wider text-blue-dark;
+	}
+	
+	.body-lg {
+		@apply text-22 leading-22;
+	}
+
+}
