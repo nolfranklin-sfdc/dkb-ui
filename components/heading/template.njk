@@ -66,7 +66,7 @@
 
 <h{{ level }}
 	class="atom atom--heading {{ size }} {{ params.classes }} {{ font }}"
-	id="{{ id }}"
+	{% if params.id %} id="{{ params.id }}" {% endif %}
 >
 	{% if params.href %}
 		<a
