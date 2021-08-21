@@ -51,8 +51,8 @@
 		{% set heading_size = "text-5xl" %}
 	{% elif heading_size === '6xl' %}
 		{% set heading_size = "display-4" %}
-	{% elif heading_size === '7xl' %}
-		{% set heading_size = "display-3" %}
+	{% elif params.size === '7xl' %}
+		{% set size = "display-3" %}
 	{% elif params.size === '8xl' %}
 		{% set size = "display-2" %}
 	{% elif params.size === '9xl' %}
@@ -68,9 +68,9 @@
 	class="atom atom--heading {{ size }} {{ params.classes }} {{ font }}"
 	id="{{ id }}"
 >
-	{% if params.url %}
+	{% if params.href %}
 		<a
-			href="{{ params.url }}"
+			href="{{ params.href }}"
 			class="block"
 		>
 			{{ params.text | safe }}
