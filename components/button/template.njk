@@ -10,12 +10,12 @@ Variation: Primary, secondary, terterary, text
 {# Set a button size. If empty, no clasess are applied #}
 
 {{ setDisplay }}
-	{% if button_display === 'block' %}
-		{% set button_display = "block" %}
-	{% elif button_display === 'inline-block' %}
-		{% set button_display = "inline-block" %}
+	{% if params.display === 'block' %}
+		{% set display = "block" %}
+	{% elif params.display === 'inline-block' %}
+		{% set display = "inline-block" %}
 	{% else %}
-		{% set button_display = '' %}
+		{% set display = '' %}
 	{% endif %}
 {{ setDisplay }}
 

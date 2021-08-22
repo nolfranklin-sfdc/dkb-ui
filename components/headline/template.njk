@@ -1,10 +1,40 @@
 {% from "../button/macro.njk" import dkbButton %}
+{% from "../heading/macro.njk" import dkbHeading %}
 
-<div class="headline">
+{# Headline template #}
 
----
-	{{ dkbButton({
-		text: "Save and continue"
-	}) }}
----
+<div class="component component--headline {{ params.headline_classes }}">
+	{% if params.eyebrow_text %}
+	<span class="headline__eyebrow {{ params.eyebrow_classes }}">
+		{{ params.eyebrow_text | safe }}
+	</span>
+	{% endif %}
+	{{ dkbHeading({
+			text:params.heading_text,
+			level:params.heading_level,
+			size:params.heading_size,
+			classes:"component--headline__heading " + params.heading_classes,
+			href:params.heading_href
+		})
+	}}
+	{% if params.description_text %}
+		<div class="component--headline__description {{ params.description_classes }}">
+			{{ params.description_text | safe }}
+		</div>
+	{% endif %}
+	{% if params.ctas %}
+		<div class="component--headline__button-group">
+			{% for cta in params.ctas %}
+				{{ dkbButton({
+						text: cta.text,
+						button_url:cta.url,
+						size:cta.size,
+						display:"inline-block",
+						classes:cta.classes,
+						variation:cta.variation
+					})
+				}}
+			{% endfor %}
+		</div>
+	{% endif %}
 </div>

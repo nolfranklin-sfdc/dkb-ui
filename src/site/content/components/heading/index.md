@@ -5,6 +5,10 @@ templateEngineOverride: njk
 ---
 {% from "../../../../../components/heading/macro.njk" import dkbHeading %}
 
+<h1 class="mb-6">
+	Component: Heading
+</h1>
+
 {{ dkbHeading({
 		text: "Display 1",
 		href: "",
@@ -25,9 +29,9 @@ templateEngineOverride: njk
 
 {{ dkbHeading({
 		text: "Display 3",
-		href: "https://www.salesforce.com/",
+		href: "",
 		size: "7xl",
-		classes: "mb-6 text-blue-60 underline hover:text-blue-30",
+		classes: "mb-6 text-blue-20",
 		level: 3
 	})
 }}
