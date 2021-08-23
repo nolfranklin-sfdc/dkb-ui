@@ -1,0 +1,10 @@
+.blockquote__text:before {
+	@apply text-blue-60;
+	line-height: 1em;
+	position: absolute;
+	top: -.6em;
+	content: "“";
+	display: block;
+	font-size: 100px;
+	font-family: AvantGarde-Demi, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}

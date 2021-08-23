@@ -10,6 +10,7 @@
 
 @import "../../components/heading/heading.css";
 @import "../../components/button/button.css";
+@import "../../components/blockquote/blockquote.css";
 
 html, body {
 	@apply antialiased;
