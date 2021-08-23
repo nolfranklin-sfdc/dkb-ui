@@ -3,7 +3,9 @@
 
 {# Headline template #}
 
-<div class="component component--headline {{ params.headline_classes }}">
+<div
+	class="component component--headline dkb-headline {{ params.headline_classes }}"
+>
 	{% if params.eyebrow_text %}
 	<span class="headline__eyebrow {{ params.eyebrow_classes }}">
 		{{ params.eyebrow_text | safe }}
