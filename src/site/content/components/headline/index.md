@@ -7,7 +7,7 @@ tags:
 ---
 {% from "../../../../../components/headline/macro.njk" import dkbHeadline %}
 
-<h1 class="mb-6">
+<h1 class="text-xl mb-6">
 	Component: Headline
 </h1>
 

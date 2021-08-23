@@ -1,13 +1,13 @@
 ---
 layout: 'layouts/base.njk'
-title: Headings
+title: Heading
 templateEngineOverride: njk
 tags:
   - component
 ---
 {% from "../../../../../components/heading/macro.njk" import dkbHeading %}
 
-<h1 class="mb-6">
+<h1 class="text-xl mb-6">
 	Component: Heading
 </h1>
 

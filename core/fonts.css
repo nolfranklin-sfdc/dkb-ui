@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Salesforce Sans';
+	font-display: swap;
+	src: url("/assets/fonts/webfonts/SalesforceSans-Light.woff2") format("woff2"),
+		url("/assets/fonts/webfonts/SalesforceSans-Light.woff") format("woff");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans';
+	font-display: swap;
+	src: url("/assets/fonts/webfonts/SalesforceSans-Regular.woff2") format("woff2"),
+		url("/assets/fonts/webfonts/SalesforceSans-Regular.woff") format("woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Salesforce Sans';
+	font-display: swap;
+	src: url("/assets/fonts/webfonts/SalesforceSans-Bold.woff2") format("woff2"), 
+		url("/assets/fonts/webfonts/SalesforceSans-Bold.woff") format("woff");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Neutraface";
+	font-display: swap;
+	src: url("/assets/fonts/Neutraface.woff") format("woff");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvantGarde-Demi";
+	font-display: swap;
+	src: url("/assets/fonts/AvantGarde-Demi.woff2") format("woff2");
+	font-weight: normal;
+}

@@ -5,5 +5,60 @@ variation:
 - vertical
 feature: true (bg-color)
 
+	card_set,
+	card_classes,
+	card_url,
+	image,
+	content
+
 #}
 
+{% from "../headline/macro.njk" import headline with context %}
+{% from "../figure/macro.njk" import figure with context %}
+
+
+{{ cardSets }}
+	{% if card_set === 1 %}
+		{% set heading_size = '2xl' %}
+	{% else %}
+		{% set heading_size = content.heading_size %}
+	{% endif %}
+{{ cardSets }}
+
+<div
+	class="component component--card {{ card_classes }}"
+>
+	<a
+		href="{{ card_url }}"
+		class="flex flex-wrap block"
+		tabindex="-1"
+	>
+		{{ figure(
+				figure_classes=image.figure_classes+" card__image",
+				image_src=image.image_src,
+				image_params=image.image_params,
+				image_alt=image.image_alt,
+				image_figcaption=image.image_figcaption,
+				image_srcset=image.image_srcset,
+				image_sizes=image.image_sizes,
+				image_classes=image.image_classes,
+				image_width=image.image_width,
+				image_height=image.image_height
+			)
+		}}
+	</a>
+	{{ headline(
+			eyebrow_text=content.eyebrow_text,
+			eyebrow_classes=content.eyebrow_classes,
+			headline_classes=content.headline_classes,
+			heading_text=content.heading_text,
+			heading_size=heading_size,
+			heading_level=content.heading_level,
+			heading_classes=content.heading_classes,
+			heading_url=content.heading_url,
+			description_text=content.description_text,
+			description_classes=content.description_classes,
+			ctas=content.ctas
+		)
+	}}
+</div>

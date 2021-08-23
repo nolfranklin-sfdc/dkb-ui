@@ -1,0 +1,36 @@
+{#
+
+	figure_classes,
+	image_src,
+	image_params,
+	image_alt,
+	image_figcaption,
+	image_srcset,
+	image_sizes,
+	image_classes,
+	image_width,
+	image_height
+
+#}
+
+{# Figure template #}
+
+<figure
+	class="component component--figure {{ params.classes }}"
+>
+	<img
+		srcset="{{ params.srcset }}"
+		sizes="{{ params.sizes }}"
+		src="{{ params.src }}{{ params.params }}"
+		alt="{{ params.alt }}"
+		loading="lazy"
+		class="component--figure__image {{ params.image_classes }}"
+		width="{{ params.width }}"
+		height="{{ params.height }}"
+	/>
+	{% if params.figcaption %}
+		<figcaption class="component--figure__figcaption">
+			{{ params.figcaption }}
+		</figcaption>
+	{% endif %}
+</figure>
