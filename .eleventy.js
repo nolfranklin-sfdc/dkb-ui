@@ -1,5 +1,11 @@
 module.exports = function (config) {
 
+	// Debug JSON data
+
+	config.addNunjucksFilter("JSONstringify", function (value) {
+		return `<pre>${JSON.stringify(value, undefined, 2)}</pre>`;
+	});
+
 	config.addPassthroughCopy("assets");
 
 	return {
@@ -12,10 +18,7 @@ module.exports = function (config) {
 		templateFormats: ['njk', 'md'],
 		htmlTemplateEngine: 'njk',
 		markdownTemplateEngine: 'njk',
-		// Because eleventy's passthroughFileCopy does not work with permalinks
-		// we need to manually copy assets ourselves using gulp.
-		// https://github.com/11ty/eleventy/issues/379
-		passthroughFileCopy: true,
+		passthroughFileCopy: true
 	};
 
 };

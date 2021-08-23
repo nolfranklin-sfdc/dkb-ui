@@ -2,6 +2,8 @@
 layout: 'layouts/base.njk'
 title: Headings
 templateEngineOverride: njk
+tags:
+  - component
 ---
 {% from "../../../../../components/heading/macro.njk" import dkbHeading %}
 

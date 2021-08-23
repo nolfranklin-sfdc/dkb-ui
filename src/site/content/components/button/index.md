@@ -2,6 +2,8 @@
 layout: 'layouts/base.njk'
 title: Button
 templateEngineOverride: njk
+tags:
+  - component
 ---
 {% from "../../../../../components/button/macro.njk" import dkbButton %}
 
