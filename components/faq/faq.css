@@ -3,12 +3,16 @@ details {
 }
 
 summary {
-	@apply text-blue-20 text-base relative list-none cursor-pointer text-blue-20 font-avantgarde py-4;
+	@apply text-blue-20 text-base relative list-none cursor-pointer text-blue-20 font-avantgarde py-5;
 }
 
 .dkb-faq__content {
-	@apply pb-4 text-base;
+	@apply pb-5 text-base;
 }
+
+	.dkb-faq__content a {
+		@apply text-blue-50 underline;
+	}
 
 	/* Details marker */
 
