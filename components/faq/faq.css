@@ -1,35 +1,35 @@
-summary {list-style: none}
-summary::-webkit-details-marker {display: none; }
-
-details summary { 
-	cursor: pointer;
-  }
-  
-  details summary > * {
-	display: inline;
-  }
-
-details summary {
-	@apply text-blue-20 text-xl;
-	position: relative;
+details {
+	@apply border-b;
 }
 
-details summary::before {
-	@apply rounded-full bg-blue-95 text-blue-30 text-center align-middle;
-	content:"";
-	background-image: url('/assets/images/faq/expand.svg');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	/* you can style it however you want, use background-image for example */
-	position: absolute;
-	right: 0;
-	transition: all .25s ease;
-	width: 24px;
-	height: 24px;
-  }
-  
-  /* By using [open] we can define different styles when the disclosure widget is open */
-  details[open] summary::before { 
-	background-image: url('/assets/images/faq/collapse.svg');
-	transform: rotate(180deg);
-  }
+summary {
+	@apply text-blue-20 text-base relative list-none cursor-pointer text-blue-20 font-avantgarde py-4;
+}
+
+.dkb-faq__content {
+	@apply pb-4 text-base;
+}
+
+	/* Details marker */
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	details summary::before {
+		@apply rounded-full bg-blue-95 text-blue-30 text-center align-middle right-0 absolute;
+		content:"";
+		background-image: url('/assets/images/faq/expand.svg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		transition: all .25s ease;
+		width: 24px;
+		height: 24px;
+	}
+
+	/* By using [open] we can define different styles when the disclosure widget is open */
+
+	details[open] summary::before { 
+		background-image: url('/assets/images/faq/collapse.svg');
+		transform: rotate(180deg);
+	}
